@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+#it will layout for this page from layout file 
+
+{% block title %}
+cricket and tweet
+{% endblock title %}
+
+{% block content %}
+<h1 class="text-center mt-5">
+    Are you sure that you want to delete the tweet ?
+</h1> 
+     <form method="post" class="mx-5">
+        {% csrf_token %}
+        <button class="btn btn-danger ">delete </button>
+        <a href="{% url 'tweet_list' %}" class="btn btn-success ">Cancle</a>
+     </form>
+    
+
+{% endblock content %}
